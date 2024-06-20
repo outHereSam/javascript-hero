@@ -10,4 +10,13 @@ const superHero = {
     "Master of Disguise",
   ],
   weakness: "Lack of superhuman abilities",
+  usePower(powerName) {
+    console.log(`${this.name} is using his ${powerName}`);
+  },
+  revealIdentity() {
+    console.log(`${this.name} is ${this.secretIdentity}`);
+  },
 };
+
+superHero.usePower("freeze");
+superHero.revealIdentity();
