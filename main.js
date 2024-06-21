@@ -1,5 +1,20 @@
 // Hero Object
-// Superhero creator function
+// Objective 1: Object Creation Basics
+const superhero = {
+  name: "Spider-Man",
+  secretIdentity: "Peter Parker",
+  powers: [
+    "Enhanced Strength",
+    "Ability to cling to any surface",
+    "Spidey Sense",
+  ],
+  weakness: "Ethyl Chloride",
+  revealIdentity() {
+    console.log(`${this.name}'s secret identity is ${this.secretIdentity}`);
+  },
+};
+
+// Objective 2: Superhero creator function
 const SuperHero = (name, secretIdentity, powers, weakness, heroType) => {
   return {
     name,
@@ -39,8 +54,7 @@ const superman = SuperHero(
   "Hero"
 );
 
-// const supergirl = SuperHero()
-
+// Objective 4: Prototypal Inheritance
 const supergirl = Object.assign({}, superman, {
   name: "Supergirl",
   secretIdentity: "Kara Zor-El",
@@ -62,7 +76,7 @@ const zod = Object.assign({}, superman, {
 
 // console.log(zod);
 
-// Object Iteration and Transformation
+// Objective 5: Object Iteration and Transformation
 const supers = [batsy, superman, supergirl, zod];
 const superHeroes = supers.filter((hero) => hero.heroType === "Hero");
 const villains = supers.filter((hero) => hero.heroType === "Villain");
