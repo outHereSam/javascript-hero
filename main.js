@@ -36,13 +36,19 @@ const superman = SuperHero(
   "Kryptonite"
 );
 
-const supergirl = Object.assign(
-  {
-    breathe() {
-      console.log("Breathing in space");
-    },
-  },
-  SuperHero
-);
+// const supergirl = SuperHero()
 
-supergirl.breathe();
+const supergirl = Object.assign({
+  name: "Supergirl",
+  secretIdentity: "Kara Zor-El",
+  breathe() {
+    console.log("Breathing in space");
+  },
+  superman,
+});
+
+console.log(superman);
+console.log(supergirl);
+
+// Object Iteration and Transformation
+const supers = [SuperHero("")];
