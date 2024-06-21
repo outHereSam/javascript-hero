@@ -49,8 +49,9 @@ const supergirl = Object.assign({}, superman, {
   },
 });
 
-console.log(superman);
-console.log(supergirl);
+// console.log(superman);
+// console.log(supergirl);
+// supergirl.breathe();
 
 // Create new supervillains
 const zod = Object.assign({}, superman, {
@@ -59,7 +60,17 @@ const zod = Object.assign({}, superman, {
   heroType: "Villain",
 });
 
-console.log(zod);
+// console.log(zod);
 
 // Object Iteration and Transformation
-const supers = [SuperHero("")];
+const supers = [batsy, superman, supergirl, zod];
+const superHeroes = supers.filter((hero) => hero.heroType === "Hero");
+const villains = supers.filter((hero) => hero.heroType === "Villain");
+
+console.log(superHeroes);
+console.log(villains);
+
+// Reveal supers identities
+supers.forEach((hero) => {
+  hero.revealIdentity();
+});
